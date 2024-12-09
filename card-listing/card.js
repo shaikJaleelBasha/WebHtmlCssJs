@@ -8,7 +8,7 @@ const products = [
         location: "3km"
     },
     {
-        image: "https://ae01.alicdn.com/kf/H61abf9bb157c4c96b1dbee83e4d1e88fO/Men-s-Luxury-Brand-Sports-Watch.jpg",
+        image: "https://cdn7.bigcommerce.com/s-pkla4xn3/images/stencil/1280x1280/products/4436/34744/LIGE-Mens-Watches-Top-Brand-Luxury-Leather-Casual-Quartz-Watch-Men-Military-Sport-Waterproof-Clock-Gold__79354.1522933698.jpg",
         discount: "15%",
         name: "Sports Watch",
         rating: "4.8",
@@ -16,7 +16,7 @@ const products = [
         location: "5km"
     },
     {
-        image: "https://ae01.alicdn.com/kf/H1cb1bf3a84b54f4f9c8eae07b81d495dM/Classic-Watch-for-Men.jpg",
+        image: "https://ae01.alicdn.com/kf/HTB1z3uVKFXXXXcsaXXXq6xXFXXX3/MEGIR-men-s-quartz-watches-stainless-steel-mesh-band-black-watch-chronograph-slim-strap-mens-watch.jpg",
         discount: "10%",
         name: "Classic Watch",
         rating: "4.5",
@@ -33,26 +33,25 @@ products.forEach(product=>{
     productCard.classList.add('product-card')
 
     productCard.innerHTML=`
-    <div class="watch-image">
-                <img src="https://ae01.alicdn.com/kf/H764363e5d22c430b8b3fbd1f363db5bbM/LIGE-Fashion-Top-Brand-Luxury-Gold-Watches-Men-s-Stainless-Steel-Waterproof-Quartz-Clock-Male-Military.jpg"
-                    alt="image">
-                    <div class="discount">
-                        <p>Discount: 20%</p>
-                    </div>
+   <div class="watch-image">
+            <img src="${product.image}" alt="image">
+            <div class="discount">
+                <p>Discount: ${product.discount}</p>
             </div>
-            <div class="watch-details">
-                <div class="group">
-                    <p><b>ligie watch</b></p>
-                    <p class="rating">4.6 &#x2605 </p>
-                </div>
-                <div class="group">
-                    <p>price</p>
-                    <p>$500 USD</p>
-                </div>
-                <div class="group">
-                    <p>location</p>
-                    <p>3km</p>
-                </div>
-            </div>`;
+        </div>
+        <div class="watch-details">
+            <div class="group">
+                <p><b>${product.name}</b></p>
+                <p class="rating">${product.rating} &#x2605</p>
+            </div>
+            <div class="group">
+                <p>Price</p>
+                <p>${product.price}</p>
+            </div>
+            <div class="group">
+                <p>Location</p>
+                <p>${product.location}</p>
+            </div>
+        </div>`;
             productContainer.appendChild(productCard);
 });
