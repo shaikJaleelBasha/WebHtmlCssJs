@@ -1,0 +1,22 @@
+.sudo{
+    font-family: 'Courier New', Courier, monospace;
+    font: 100px;
+}
+
+.sudo p::first-letter{
+    color: brown;
+}
+.para::first-line{
+    background-color: aqua;
+    text-transform: uppercase;
+}
+
+
+#name::before{
+    content: "SHAIK ";
+    color: blueviolet;
+}
+
+p[title]{
+    background-color: brown;
+}
